@@ -1,0 +1,145 @@
+
+<!--  solved examples -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jstest</title>
+	<script type="text/javascript">
+
+		//declaring variables
+		var name=prompt("Enter Your Name");
+		var lucky_number=21;
+		var friend="No one";
+		document.write("Hello Mr. " + name+" and your lucky number is "+lucky_number+" . "+friend+" is your friend.<br>");
+
+		//arrays
+		nameArray=new Array();
+		nameArray[0]="disha";
+		nameArray[1]="itsmee";
+		
+		for (var i = 2; i <= 4; i++) {
+			nameArray[i]=i*i;
+		}
+		
+		for (var i = 0; i < nameArray.length ; i++) {
+			document.write(nameArray[i]+"<br>");
+		}
+
+		document.write("<br>");
+		//dense array
+		nameArr=new Array(1,"he","is",12,"one",12.1,true,"no one");
+		for (var i = 0; i < nameArr.length; i++) {
+			document.write(nameArr[i]+"<br>");
+		}
+
+		//join
+		document.write(nameArray.join("--")+"<br>");
+
+		//reverse
+		nameArray.reverse();
+		document.write(nameArray.join("__")+"<br>");
+
+
+		//array length property
+		document.write(arrnew.length+"<br>");
+
+		//delete operator
+		delete arrnew[3][1];
+		document.write("deleting arr[3][1] <br>");
+		document.write(arrnew[3][1]+"<br>");
+
+		//if
+		var day="saturday";
+		if(day=="saturday"){
+			document.write("its weekend");
+			alert("its a weekend");
+		}
+
+		//if-else
+		(day=="saturday")?"weekend<br>":"not weekend<br>";
+
+		//for loops
+		document.write("for loop");
+		for (var i = 0; i < 10; i++) {
+			document.write(i+"<br>");
+
+		}
+
+		//while loop
+		document.write("while loop<br>");
+		var j=1;
+		while(j!=4){
+			document.write(j+"<br>");
+			++j;
+		}
+
+		//do while loop
+		var i=0;
+		document.write("do while loop<br>");
+		do{
+			document.write(i+"<br>");
+			++i;
+		}while(i!=3);
+
+		//built in fuction eval
+		document.write("using eval function<br>");
+		document.write(eval(2*4-5)+"<br>");
+
+		// //parseint and parsefloat fuction
+
+		document.write("parseint<br>");
+		document.write(parseInt("xyz123")+"<br>");
+		document.write(parseInt("xyz")+"<br>");
+
+
+		
+		document.write(parseFloat("xyz12.3")+"<br>");
+		document.write(parseFloat("xyz")+"<br>");
+
+		//greeting goodbye alert dialog box
+		//fuctions
+		var name="";
+		function hello(){
+			name=prompt("enter your name");
+			alert("Greeting "+name+" welcome to my page");
+		}
+
+		function _goodbye(){
+			alert("goodbye "+name);
+		}
+
+		//alert dialog box
+		alert("glitch in matrix");
+
+		//prompt dialog box
+		prompt("wt is your fav color","blue");
+
+		//prog for qsn-ans for correct incorrect answer upto 3 times
+		
+		var qsn="What is 2+2";
+		flag=0;
+		ans=prompt(qsn,"0");
+		if(ans!=4){
+			for (var count = 2; count <= 3; count++) {
+			confirm("press ok for another chance");
+			ans=prompt(qsn,"0");
+			if(ans==4){
+				flag=1;
+				alert("well tried at "+count+" chances");
+				break;
+			}
+		}
+		}
+		else{
+			flag=1;
+			alert("well tried at 1 chance");
+		}
+		if(flag==0){
+			alert("bad luck");
+		}
+	</script>
+</head>
+<body onLoad="hello();" onunload="_goodbye();">
+
+</body>
+</html>

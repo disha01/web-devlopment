@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script type="text/javascript">
+function funct()
+{
+var s=document.getElementById("user").value;
+var t=document.getElementById("pass").value;
+
+var username="disha";
+var password="disha1234";
+
+if(s==""||t=="")
+{
+    alert(" your feild is empty");
+    
+return false;
+
+}
+else{
+
+    if((s==username)&&(t==password))
+    { document.write("welcome");
+      return true;
+
+    }
+
+      else{ 
+      document.write("either password or usename is incorrect");
+      s.focus();
+      return false;
+          }
+    }
+}
+
+function yes()
+{
+var ss=document.getElementById("user").value;
+var tt=document.getElementById("pass").value;
+
+
+}
+</script>
+</head>
+<body>
+<form>
+ <div >
+ username:  <input type="text" id="user" >
+</div>
+  <br>
+<div >
+password:  <input type="text" id="pass" >
+</div>
+<button onclick=" return funct()" id="button" >submit</button>
+</form>
+
+
+</body>
+</html>

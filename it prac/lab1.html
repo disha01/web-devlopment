@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form name="one">
+ROLL_NO: <input type="text" name ="two">
+<br>
+<br>
+   NAME: <input type="text" name ="three" id="uname">
+<br>
+<br>
+  D.O.B: <input type="date" name ="four" id="dat" placeholder="dd/mm/yyyy" >
+<br>
+<input type="submit" name ="five" onclick=" return func();">
+
+</form>
+</body>
+
+<script type="text/javascript">
+
+function func()
+{
+  validate();
+  print();
+}
+
+
+function validate()
+{
+rol=/^[1-9][0-9]{6}$/;
+nam=/[a-zA-Z]+/;
+var uname=d
+ocument.getElementById("uname").value;
+var roln=document.one.two.value;
+
+if(document.one.two.value==""||document.one.three.value=="")
+{
+alert("field is empty");
+return false;
+}
+else{
+if((nam.test(uname)==false)||(rol.test(roln)==false))
+{
+    alert("invalid feild");
+    return false;
+}
+else return true;
+}
+
+}
+
+function print()
+{var date=document.getElementById("dat").value;
+  document.write(date);
+  return true;
+}
+
+</script>
+</html>

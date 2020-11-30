@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Practical 5</title>
+</head>
+
+<body>
+    <nav class='nav justify-content-center'>
+        <h1 id='headline'>Practical 5</h1>
+    </nav>
+    <main>
+        <img src="pic1.jpg" id='avatar' height="100px" width="100px" style="position: absolute">
+    </main>
+    <script>
+        img = document.getElementById('avatar');
+        img.style.left = "0px";
+        img.style.top = "100px"
+        maxX = screen.availWidth ;
+     
+
+        function animate() {
+            x = img.style.left
+            y = img.style.top
+            x = Number(x.substr(0, x.length-2))
+            y = Number(y.substr(0, y.length-2))
+            if(y === 100 && x !== maxX) {
+                x = (x+1)
+                img.style.left = x+'px'
+                // console.log(x+','+maxX)
+            }
+                  }
+        function change() {
+            document.getElementById('headline').style.color="#ff0000"
+        }
+
+        setInterval(animate, 2);
+        setTimeout(change, 5000);
+        setTimeout(() => {
+            document.getElementById('headline').innerText = "this is new text"
+        }, 60000);
+    </script>
+</body>
+
+</html>

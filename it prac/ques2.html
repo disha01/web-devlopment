@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script type="text/javascript">
+var district=new Array(4)
+district["empty"]=["select a district"];
+district["kerela"]=["kollam","tiruvantampuram","pallakad"];
+district["delhi"]=["south east","south west","sahadra"];
+district["mumbai"]=["thane","nagpur","pune","solapur"];
+district["mp"]=["bhind","bhopal","datia"];
+
+
+function dchange(selectobj)
+{
+var idx=selectobj.selectedIndex;
+console.log(idx);
+var w=selectobj.options[idx].value;
+console.log(w);
+
+dlist=district[w];
+
+var dselect=document.getElementById("district");
+
+var len=dselect.options.length;
+while(dselect.options.length>0)
+{
+    dselect.remove(0);
+}
+
+var newoption;
+for(var i=0;i<dlist.length;i++)
+{
+    newoption=document.createElement("option");
+    newoption.value=dlist[i];
+    newoption.text=dlist[i];
+
+try{
+
+    dselect.add(newoption);
+}
+catch(e)
+{
+    dselect.appendChild(newoption);
+}
+}
+}
+</script>
+</head>
+<body>
+
+<label for="state">select state</label>
+ <select id="state" onchange="dchange(this)">
+<option value="kerela">kerela</option>
+<option value="delhi">delhi</option>
+<option value="mumbai">pune</option>
+<option value="mp">mp</option>
+
+</select>  
+<br>
+<br>
+<label for="district">select a district</label>
+<select name="" id="district">
+    <option value="0">select a district</option>
+</select>
+</body>
+</html>

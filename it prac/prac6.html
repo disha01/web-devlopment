@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="form">
+        <div>
+            <input type="text" id="one" name="yy">firstname:
+        </div>
+        <br>
+        <div>
+            <input type="text" id="two">lastname:
+        </div>
+        <br>
+        <div>
+            <input type="email" id="three">email :
+        </div>
+        <br>
+        <div>
+            <input type="text" id="four">adress:
+        </div>
+        <br>
+        <div>
+            <input type="text" id="five"> city:
+        </div>
+        <br>
+        <div>
+            <input type="text" id="six">state:
+            <input type="text" id="seven"> postalcode:
+            <input type="text" id="eigth">country:
+
+        </div>
+        <br>
+
+        <h5>please choose most appropriate statement</h5>
+        <div>
+            <input type="radio" name="radio" id="nine">i regularly purchase item online<br>
+            <input type="radio" name="radio" id="nine">i have un ocassion purchased item online<br>
+            <input type="radio" name="radio" id="nine">i havde not purchased anhything online but i consider that<br>
+            <input type="radio" name="radio" id="nine">i prefer to shop real stores<br>
+
+        </div>
+
+        <h5>i'm interested in</h5>
+        <div>
+            <input type="radio" name="radio" id="nine">hiking<br>
+            <input type="radio" name="radio" id="nine">mountain biking<br>
+            <input type="radio" name="radio" id="nine">camping<br>
+            <input type="radio" name="radio" id="nine">rockclimbing<br>
+            <input type="radio" name="radio" id="nine">off red<br>
+            <input type="radio" name="radio" id="nine">cross country skiing<br>
+
+        </div>
+
+        <div>
+            <h5>i learnt about this site from</h5>
+            <select name="dropdown">
+                <option value="print_ads">print_ads</option>
+                <option value="newspaper">newspaper</option>
+                <option value="other">other</option>
+
+
+            </select>
+        </div>
+
+        <div>
+            <h5>comments</h5>
+            <textarea id="ten"></textarea>
+        </div>
+
+        <input type="button" onclick=" return validate()" value="submit">
+        <input type="reset"  value="startover">
+
+
+
+    </form>
+</body>
+<script type="text/javascript">
+    var fname = document.getElementById("one");
+    var lname = document.getElementById("two");
+    var mail = document.getElementById("three");
+    var adress = document.getElementById("four");
+    var city = document.getElementById("five");
+    var state = document.getElementById("six");
+    var postcode = document.getElementById("seven");
+    var country = document.getElementById("eigth");
+
+
+
+    function validate() {
+
+        if (fname.value == "") {
+            alert("fname empty");
+            return false;
+        }
+        else
+            if (lname.value == "") {
+                alert("lname empty");
+                return false;
+            } else
+                if (mail.value == "") {
+                    alert("mail empty");
+                    return false;
+                } else
+                    if (adress.value == "") {
+                        alert("adrrss empty");
+                        return false;
+                    } else
+
+                        if (city.value == "") {
+                            alert("city empty");
+                            return false;
+                        } else
+
+                            if (state.value == "") {
+                                alert("state empty");
+                                return false;
+                            } else
+
+                                if (postcode.value == "") {
+                                    alert("postcode empty");
+                                    return false;
+                                } else
+
+                                    if (country.value == "") {
+                                        alert("counrty empty");
+                                        return false;
+                                    }
+
+    }
+
+
+
+</script>
+
+</html>

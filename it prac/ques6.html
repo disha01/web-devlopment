@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" id="one" value="forward" onclick="func1()">   
+<input type="button" id="one" value="backward" onclick="func2()">
+<input type="button" id="one" value="go" onclick="func3()">
+ 
+ 
+</body>
+<script type="text/javascript">
+//the  history object contains browser history 
+//it has mainly three methods  
+//forward() that load next pages  
+//back() that loads pev pages
+//go() that work both ways depending on parameters 
+
+
+function func1()
+{
+window.history.forward();
+
+}
+
+function func2()
+{
+    window.history.back();
+}
+function func3()
+{   //2 forward pur -2 for 2 backward
+    window.history.go(2);
+}
+</script>
+</html>

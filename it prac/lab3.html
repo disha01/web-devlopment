@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="one">
+<input type="submit" id="two" onclick="add();" value="add"></input><br>
+<input type="submit" id="four" onclick="sort();" value="sort"></input>
+
+</body>
+
+
+<script type="text/javascript">
+var inparray=Array();
+ var x=0; 
+function sort()
+{
+  swap();
+  display();
+}
+
+function add()
+{ 
+
+   inparray[x]=document.getElementById("one").value ; 
+   x++;
+   document.getElementById("one").value="";
+}
+ 
+function swap()
+{  
+for(var a=0;a<(inparray.length-1);a++)
+{
+    for(b=0;b<(inparray.length-a-1);b++)
+    {
+        if(inparray[b]>inparray[b+1])
+        {
+        temp=inparray[b+1];
+        inparray[b+1]=inparray[b];
+        inparray[b]=temp;
+        }
+    }
+}
+} 
+function display()
+{
+  
+  //alert("working");
+document.write("the sorted array is <br>");
+for( a=0; a<inparray.length; a++)
+document.write("element "+a+"="+inparray[a]+"<br>");
+}
+
+</script>
+</html>

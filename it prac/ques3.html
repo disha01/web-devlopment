@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type=" text" name="" id="one" onselect="func();">
+<br><br>
+<input type="text" onmouseover="func2()">
+<br><br>
+<input type="text" id="three" onfocus="func3()">
+<br><br>
+<input type="text" id="four" onblur="func4()">
+
+
+</body>
+
+
+
+
+<script type="text/javascript">
+function func()
+{
+
+alert("text selected");
+
+}
+
+function func2()
+{
+    alert("on mouse over event");
+}
+function func3()
+{
+document.getElementById("three").style.backgroundColor="green";
+}
+function func4()
+{
+ alert("box out of focus");   
+}
+</script>
+
+</html>

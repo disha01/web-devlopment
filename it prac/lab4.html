@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>stack </title>
+   </head>
+
+<body>
+    <h2>Stack Implemenation</h2>
+    <button onclick="display()">show stack</button>
+    <br>
+    <h3><span id="getData"></span></h3>
+    <br>
+    <form name="Push">
+        <td><input type="number" name="one"></td>
+        <td><input type="button" value="push" onclick="push()" /></td>
+
+    </form>
+
+    <br>
+    <form name="Pop">
+        <td><input type="text" name="two"></td>
+        <td><input type="button" value="pop" onclick="pop()" /></td>
+    </form>
+
+</body>
+
+<script>
+
+    var stack_s = new Array();
+    var s_top = -1;
+
+    function display() {
+        console.log(stack_s)
+        if (s_top == -1) {
+            console.log("Empty Stack");
+            document.getElementById("getData").innerHTML += "empty stack";
+        } else {
+            console.log("Non Empty Stack");
+            document.getElementById("getData").innerHTML = "";
+            for (var i = 0; i <= s_top; i++) {
+                console.log(i);
+                document.getElementById("getData").innerHTML += stack_s[i] + " ";
+            }
+        }
+        return true;
+    }
+
+    function push() {
+        var ele = document.Push.one.value;
+        stack_s[++s_top] = ele;
+        console.log("push at " + s_top + ", value = " + ele);
+        return true;
+    }
+
+    function pop() {
+        console.log("pop at " + s_top)
+        const temp = stack_s.splice(s_top--, 1);
+        console.log(temp);
+        return true;
+    }
+</script>
+
+
+</html>

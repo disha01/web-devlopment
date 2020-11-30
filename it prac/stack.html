@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>stack implementation</title>
+	<script>
+
+		var stack_s = new Array();
+		var s_top = -1;
+
+		function stack_display() {
+			console.log(stack_s)
+			if (s_top == -1) {
+				console.log("Empty Stack");
+				document.getElementById("getData").innerHTML += "stack is empty";
+			} else {
+				console.log("Non Empty Stack");
+				document.getElementById("getData").innerHTML = "";
+				for (var i = 0; i <= s_top; i++) {
+					console.log(i);
+					document.getElementById("getData").innerHTML += stack_s[i] + " ";
+				}
+			}
+			return true;
+		}
+
+		function push_ele() {
+			var ele = document.Push.push.value;
+			stack_s[++s_top] = ele;
+			console.log("push at " + s_top + ", value = " + ele);
+			return true;
+		}
+
+		function pop_ele() {
+			console.log("pop at " + s_top)
+			const temp = stack_s.splice(s_top--, 1);
+			console.log(temp);
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+	<h2>Stack Implemenation</h2>
+	<button onclick="stack_display()">show stack</button>
+	<br>
+	<h3><span id="getData" ></span></h3>
+	<br>
+	<form name="Push">
+		<table cellspacing="2" cellpadding="2" border="1">
+
+			<tr id="input-name">
+				<td align="right">Push</td>
+				<td><input type="number" name="push" /></td>
+
+				<td align="right"></td>
+				<td><input type="button" value="pushsubmit" onclick="push_ele()" /></td>
+			</tr>
+
+		</table>
+	</form>
+
+	<br>
+	<form name="Pop">
+		<table cellspacing="2" cellpadding="3" border="2">
+			<tr id="input-name">
+				<td align="right">Pop</td>
+				<td><input type="text" name="Pop" value="It pops the s_top most element" readonly="" /></td>
+
+				<td align="right"></td>
+				<td><input type="button" value="popsubmit" onclick="pop_ele()" /></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+
+</html>
